@@ -15,7 +15,10 @@ if Weight <= 2.0 and Distance <= 100.0 and isExpress and isInternational:
 
 elif isInternational and isExpress:
     Total = (base_cost * 1.40) + 50
-
+    
+elif oversized >= 30 or distance >= 1000 :
+    Total = (base_cost * 1.20) + 25
+    
 elif isExpress or (isInternational and Weight > 20.0) :
     Total = base_cost + 30
 
